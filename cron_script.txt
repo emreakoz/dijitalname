@@ -1,0 +1,9 @@
+17 05 * * * /home/base_env/bin/python3 /home/news_hub/scrape_sabah.py  >> /home/news_hub/cron_logs/sabah.log 2>&1 
+
+17 05 * * * /home/base_env/bin/python3 /home/news_hub/scrape_milliyet.py >> /home/news_hub/cron_logs/milliyet.log 2>&1
+
+17 05 * * * /home/base_env/bin/python3 /home/news_hub/scrape_hurriyet.py >> /home/news_hub/cron_logs/hurriyet.log 2>&1
+
+17 05 * * * /home/base_env/bin/python3 /home/news_hub/scrape_ensonhaber.py >> /home/news_hub/cron_logs/ensonhaber.log 2>&1
+
+23 05 * * * /home/base_env/bin/python3 /home/news_hub/post_op_ed.py >> /home/news_hub/cron_logs/post_op_ed.log 2>&1

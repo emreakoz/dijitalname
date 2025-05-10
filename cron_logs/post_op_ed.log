@@ -1,0 +1,84 @@
+2025-05-06 00:40:01,950 - INFO - The date: 2025-05-06 is going to be checked in the db.
+2025-05-06 00:40:01,954 - INFO - Total of 4 op eds are retreived.
+Traceback (most recent call last):
+  File "/home/news_hub/post_op_ed.py", line 17, in <module>
+    op_ed_text, title = sample_from_all_op_eds(all_dfs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/news_hub/helper.py", line 93, in sample_from_all_op_eds
+    sampled_row = df.sample()
+                  ^^^^^^^^^^^
+  File "/home/base_env/lib/python3.12/site-packages/pandas/core/generic.py", line 6118, in sample
+    sampled_indices = sample.sample(obj_len, size, replace, weights, rs)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/base_env/lib/python3.12/site-packages/pandas/core/sample.py", line 152, in sample
+    return random_state.choice(obj_len, size=size, replace=replace, p=weights).astype(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "numpy/random/mtrand.pyx", line 964, in numpy.random.mtrand.RandomState.choice
+ValueError: a must be greater than 0 unless no samples are taken
+2025-05-06 00:46:01,344 - INFO - The date: 2025-05-06 is going to be checked in the db.
+2025-05-06 00:46:01,348 - INFO - Total of 4 op eds are retreived.
+2025-05-06 00:46:01,348 - INFO - All op eds:
+2025-05-06 00:46:01,348 - INFO - Empty DataFrame
+Columns: [date, author, title, content]
+Index: []
+Traceback (most recent call last):
+  File "/home/news_hub/post_op_ed.py", line 17, in <module>
+    op_ed_text, title = sample_from_all_op_eds(all_dfs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/news_hub/helper.py", line 98, in sample_from_all_op_eds
+    sampled_row = df.sample()
+                  ^^^^^^^^^^^
+  File "/home/base_env/lib/python3.12/site-packages/pandas/core/generic.py", line 6118, in sample
+    sampled_indices = sample.sample(obj_len, size, replace, weights, rs)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/base_env/lib/python3.12/site-packages/pandas/core/sample.py", line 152, in sample
+    return random_state.choice(obj_len, size=size, replace=replace, p=weights).astype(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "numpy/random/mtrand.pyx", line 964, in numpy.random.mtrand.RandomState.choice
+ValueError: a must be greater than 0 unless no samples are taken
+2025-05-06 00:50:01,741 - INFO - The date: 2025-05-06 is going to be checked in the db.
+2025-05-06 00:50:01,744 - INFO - Total of 4 op eds are retreived.
+2025-05-06 00:50:01,744 - INFO - [Empty DataFrame
+Columns: [date, author, title, content]
+Index: [], Empty DataFrame
+Columns: [date, author, title, content]
+Index: [], Empty DataFrame
+Columns: [date, author, title, content]
+Index: [], Empty DataFrame
+Columns: [date, author, title, content]
+Index: []]
+2025-05-06 00:50:01,746 - INFO - All op eds:
+2025-05-06 00:50:01,746 - INFO - Empty DataFrame
+Columns: [date, author, title, content]
+Index: []
+Traceback (most recent call last):
+  File "/home/news_hub/post_op_ed.py", line 17, in <module>
+    op_ed_text, title = sample_from_all_op_eds(all_dfs)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/news_hub/helper.py", line 99, in sample_from_all_op_eds
+    sampled_row = df.sample()
+                  ^^^^^^^^^^^
+  File "/home/base_env/lib/python3.12/site-packages/pandas/core/generic.py", line 6118, in sample
+    sampled_indices = sample.sample(obj_len, size, replace, weights, rs)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/base_env/lib/python3.12/site-packages/pandas/core/sample.py", line 152, in sample
+    return random_state.choice(obj_len, size=size, replace=replace, p=weights).astype(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "numpy/random/mtrand.pyx", line 964, in numpy.random.mtrand.RandomState.choice
+ValueError: a must be greater than 0 unless no samples are taken
+2025-05-06 02:59:02,006 - INFO - The date: 2025-05-06 is going to be checked in the db.
+2025-05-06 02:59:02,013 - INFO - Total of 48 op eds are retreived.
+2025-05-06 02:59:02,014 - INFO - Sampled op ed title is Bir yumruk, altı madde
+✅ Successfully posted to WordPress!
+2025-05-06 06:13:01,496 - INFO - The date: 2025-05-06 is going to be checked in the db.
+2025-05-06 06:13:01,501 - INFO - Total of 13 op eds are retreived.
+2025-05-06 06:13:01,501 - INFO - Sampled op ed title is 75. yılımız
+✅ Successfully posted to WordPress!
+2025-05-07 06:13:02,049 - INFO - The date: 2025-05-07 is going to be checked in the db.
+2025-05-07 06:13:02,054 - INFO - Total of 6 op eds are retreived.
+2025-05-07 06:13:02,054 - INFO - Sampled op ed title is Kadro dağılımı ne kadar adil?
+✅ Successfully posted to WordPress!
+2025-05-08 06:13:01,944 - INFO - The date: 2025-05-08 is going to be checked in the db.
+2025-05-08 06:13:01,949 - INFO - Total of 22 op eds are retreived.
+2025-05-08 06:13:01,950 - INFO - Sampled op ed title is “Riviera” derken, Trump umut kaynağı mı oluyor?
+✅ Successfully posted to WordPress!
