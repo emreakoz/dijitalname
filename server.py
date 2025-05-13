@@ -12,7 +12,7 @@ users_db_path = os.getenv("USERS_DB")
 logging.info(f"Received db path: {users_db_path}")
 
 # === /register endpoint ===
-@app.route('/register', methods=['POST'])
+@app.route('/kayit-ol', methods=['POST'])
 def register_user():
     data = request.get_json()
     logging.info(f"Received registration data {data}.")
@@ -23,7 +23,7 @@ def register_user():
     username = data.get("username")
     email = data.get("email")
     password = data.get("password")
-    logging.info(f"Received username: {data}, email: {email}, password: {password}.")
+    logging.info(f"Received username: {username}, email: {email}, password: {password}.")
 
     if not username or not email or not password:
         return jsonify({'error': 'Missing fields'}), 400
@@ -35,13 +35,19 @@ def register_user():
         c.execute("""
             CREATE TABLE IF NOT EXISTS users (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
-                username TEXT,
-                email TEXT UNIQUE,
-                password TEXT
+                username TEXT NOT NULL,
+                email TEXT UNIQUE NOT NULL,
+                password TEXT NOT NULL
             )
         """)
-        c.execute("INSERT OR IGNORE INTO users (username, email, password) VALUES (?, ?, ?)",
-                  (username, email, password))
+
+        c.execute("""
+            INSERT INTO users (username, email, password)
+            VALUES (?, ?, ?)
+            ON CONFLICT(email) DO UPDATE SET
+                username = excluded.username,
+                password = excluded.password
+        """, (username, email, password))
         conn.commit()
         conn.close()
         return jsonify({'status': 'success', 'user': email}), 200
