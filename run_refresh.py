@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route("/refresh", methods=["POST"])
 def refresh_content():
     try:
-        result = subprocess.run(["python3", "post_op_ed.py"], check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+        result = subprocess.run(["python3", "post_news.py"], check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
         app.logger.info(f"Script output: {result.stdout}")
         return jsonify({"status": "success", "message": "Content refreshed"})
     except subprocess.CalledProcessError as e:
